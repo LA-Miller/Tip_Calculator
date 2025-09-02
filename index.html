@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+</head>
+<body>
+
+    <script>
+        let billString = prompt("Enter your bill.");
+        if(!(isNaN(billString))) {
+            let bill = Number(billString);
+            console.log("bill:", bill);
+
+            let taxedBill = bill * 1.07;
+            console.log("Taxed Bill:", taxedBill.toFixed(2));
+
+            let finalBill = taxedBill * 1.15;
+            console.log("Final Bill with tip:", finalBill.toFixed(2));
+
+            alert("Final Bill: $" + finalBill.toFixed(2));
+
+        } else {
+            alert("Value entered is not a number.");
+        }
+        
+    </script>
+    
+</body>
+</html>
